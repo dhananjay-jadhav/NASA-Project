@@ -17,6 +17,10 @@ app.use(express.json());
 
 app.use(express.static(join(__dirname, "..", "public")));
 
+app.use('/',(req, res) => {
+    res.sendFile(join(__dirname, "..", "public", 'index.html'))
+});
+
 app.use('/planets', planetsRoute);
 
 export default app;
