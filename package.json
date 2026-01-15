@@ -1,4 +1,14 @@
 {
   "name": "nasa-project",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.12.0",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "start": "yarn server & yarn client",
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server dev"
+  }
 }
