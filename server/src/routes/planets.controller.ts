@@ -3,5 +3,5 @@ import { planetes } from '../models/planets.model';
 
 
 export const getPlanets = (req: Request, res: Response) => {
-    return res. (200).json(planetes);
+    return res.status(200).json(planetes);
 }
