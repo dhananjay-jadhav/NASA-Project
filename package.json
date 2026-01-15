@@ -7,8 +7,9 @@
     "client"
   ],
   "scripts": {
-    "start": "yarn server & yarn client",
-    "client": "yarn workspace client start",
-    "server": "yarn workspace server dev"
+    "dev": "yarn workspace server & yarn workspace client",
+    "start": "yarn workspace client build && yarn workspace server dev",
+    "client": "yarn workspace client",
+    "server": "yarn workspace server"
   }
 }
