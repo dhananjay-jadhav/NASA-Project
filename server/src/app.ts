@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-import planetsRoute from './routes/planets.routes';
+import planetsRoute from './routes/planets.routes.js';
 
 const app = express();
 

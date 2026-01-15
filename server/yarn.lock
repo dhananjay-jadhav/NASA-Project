@@ -1957,6 +1957,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"csv-parse@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "csv-parse@npm:6.1.0"
+  checksum: 10c0/098c69e5b3b50d4bf65401dc3b2f1bd66f272fe985be99d7cb9f14ad33a7218f0f5695a03a82720cf47141d242bf44b4836ff32900751bef087057bc6e6715a2
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.4, debug@npm:^4.4.0, debug@npm:^4.4.3":
   version: 4.4.3
   resolution: "debug@npm:4.4.3"
@@ -3355,6 +3362,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"kepler-planets@npm:^0.0.9":
+  version: 0.0.9
+  resolution: "kepler-planets@npm:0.0.9"
+  dependencies:
+    csv-parse: "npm:^6.1.0"
+    typescript: "npm:^5.9.3"
+  checksum: 10c0/3f369594ae2a1eee094220f7824001202db873b40921c88ca8e7b39c0d7e8a93d15ab58364071d939eea4de52b3d7ba5cdcce5ceec5a46b47aa914b3ef681dab
+  languageName: node
+  linkType: hard
+
 "leven@npm:^3.1.0":
   version: 3.1.0
   resolution: "leven@npm:3.1.0"
@@ -4111,6 +4128,7 @@ __metadata:
     cors: "npm:^2.8.5"
     express: "npm:^5.2.1"
     jest: "npm:^30.2.0"
+    kepler-planets: "npm:^0.0.9"
     ts-jest: "npm:^29.4.6"
     ts-node: "npm:^10.9.2"
     tsx: "npm:^4.21.0"

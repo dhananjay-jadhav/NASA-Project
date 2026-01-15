@@ -4,9 +4,11 @@
   "scripts": {
     "dev": "tsx --watch src/server.ts"
   },
+  "type": "module",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.2.1",
+    "kepler-planets": "^0.0.9",
     "typescript": "^5.9.3"
   },
   "devDependencies": {

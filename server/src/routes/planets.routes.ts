@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getPlanets } from "./planets.controller";
+import { getPlanets } from "./planets.controller.js";
 
 const planetsRoute = Router();
 
