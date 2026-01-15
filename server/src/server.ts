@@ -1,12 +1,18 @@
-import { createServer } from 'http';
+import { createServer } from "http";
 
-import app from './app.js';
-
+import app from "./app.js";
+import { loadPlanetsData } from "./models/planets.model.js";
 
 const PORT = process.env.PORT || 4000;
 
-const server = createServer(app);
+async function startServer(): Promise<void> {
+  const server = createServer(app);
 
-server.listen(PORT, () => {
-    console.log(`Listening on the port ${PORT}.....`)
-});
+  await loadPlanetsData();
+
+  server.listen(PORT, () => {
+    console.log(`Listening on the port ${PORT}.....`);
+  });
+}
+
+startServer();
