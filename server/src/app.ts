@@ -5,6 +5,7 @@ import { dirname, join } from "node:path";
 
 import planetsRoute from './routes/planets.routes.js';
 import morgan from 'morgan';
+import launchesRouter from './routes/launches.routes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -22,6 +23,7 @@ app.use(morgan('combined'));
 app.use(express.static(join(__dirname, "..", "public")));
 
 app.use('/planets', planetsRoute);
+app.use('/launches', launchesRouter);
 
 app.use('/',(req, res) => {
     res.sendFile(join(__dirname, "..", "public", 'index.html'))
