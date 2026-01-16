@@ -9,12 +9,14 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.2.1",
-    "kepler-planets": "^0.0.9"
+    "kepler-planets": "^0.0.9",
+    "morgan": "^1.10.1"
   },
   "devDependencies": {
     "@types/cors": "^2",
     "@types/express": "^5.0.6",
     "@types/jest": "^30.0.0",
+    "@types/morgan": "^1.9.10",
     "@types/node": "^25.0.8",
     "jest": "^30.2.0",
     "ts-jest": "^29.4.6",
