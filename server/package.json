@@ -9,8 +9,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.2.1",
-    "kepler-planets": "^0.0.9",
-    "typescript": "^5.9.3"
+    "kepler-planets": "^0.0.9"
   },
   "devDependencies": {
     "@types/cors": "^2",
@@ -20,6 +19,7 @@
     "jest": "^30.2.0",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
-    "tsx": "^4.21.0"
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
