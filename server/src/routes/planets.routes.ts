@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { getPlanets } from "./planets.controller.js";
+import { httpGetPlanets } from "./planets.controller.js";
 
 const planetsRoute = Router();
 
 
-planetsRoute.get('/', getPlanets);
+planetsRoute.get('/', httpGetPlanets);
 
 
 export default planetsRoute;

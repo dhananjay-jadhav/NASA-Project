@@ -1,7 +1,7 @@
 import {Request , Response} from 'express';
-import { planetes } from '../models/planets.model.js';
+import { getPlanetsData } from '../models/planets.model.js';
 
 
-export const getPlanets = (req: Request, res: Response) => {
-    return res.status(200).json(planetes);
+export const httpGetPlanets = (req: Request, res: Response) => {
+    return res.status(200).json(getPlanetsData);
 }
