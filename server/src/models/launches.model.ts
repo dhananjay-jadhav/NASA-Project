@@ -27,4 +27,4 @@ const launch = {
 
 launches.set(launch.flightNumber, launch);
 
-export default launches;
+export default Array.from(launches.values());
