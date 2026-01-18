@@ -11,3 +11,14 @@ export const loadPlanetsData = async () => {
 export const getPlanetsData = () => {
    return planetes;
 }
+
+export const validPlanet = (planet:string) => {
+   const result = planetes.findIndex(data => data.kepler_name === planet);
+   if(result === -1){
+      return false;
+   }
+   if(result >= 0){
+      return true;
+   }
+   return false;
+}

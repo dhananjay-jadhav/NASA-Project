@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import { getLaunchesData, setNewLauncheData }  from '../models/launches.model.js';
+import { getPlanetsData, validPlanet } from '../models/planets.model.js';
 
 
 export function httpGetLaunches (req: Request, res: Response){
@@ -16,12 +17,19 @@ export function httpPostLaunches (req: Request, res: Response){
         });
     }
 
+    if(!validPlanet(input?.target)){
+       return res.status(400).json({
+            error: 'Invalid target'
+        }); 
+    }
+
     input.launchDate = new Date(input.launchDate);
     if(isNaN(input.launchDate)){
         return res.status(400).json({
             error: 'Invalid launchDate'
         }); 
     }
+
 
     return res.status(200).json(setNewLauncheData(input));
 }
