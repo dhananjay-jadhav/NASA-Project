@@ -1,7 +1,27 @@
 import { Request, Response } from 'express';
-import { getLaunchesData }  from '../models/launches.model.js';
+import { getLaunchesData, setNewLauncheData }  from '../models/launches.model.js';
 
 
 export function httpGetLaunches (req: Request, res: Response){
-    return res.status(200).json(getLaunchesData);
+    return res.status(200).json(getLaunchesData());
+}
+
+
+export function httpPostLaunches (req: Request, res: Response){
+    const input =  req.body;
+
+    if(!input?.mission || !input?.rocket || !input?.launchDate || !input?.target){
+        return res.status(400).json({
+            error: 'Missing required launch property'
+        });
+    }
+
+    input.launchDate = new Date(input.launchDate);
+    if(isNaN(input.launchDate)){
+        return res.status(400).json({
+            error: 'Invalid launchDate'
+        }); 
+    }
+
+    return res.status(200).json(setNewLauncheData(input));
 }

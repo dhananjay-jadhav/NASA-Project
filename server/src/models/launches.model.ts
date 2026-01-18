@@ -38,6 +38,7 @@ export const getLaunchesData = () => {
 };
 
 export const setNewLauncheData = (input: createLaunchInput) => {
+  latestFlightNumber++;
   const entity: Launch = {
     flightNumber: latestFlightNumber,
     success: true,
@@ -45,7 +46,6 @@ export const setNewLauncheData = (input: createLaunchInput) => {
     customers: ["JAY", "NASA"],
     ...input,
   };
-  latestFlightNumber++;
   launches.set(entity.flightNumber, entity);
   return launches.get(entity.flightNumber);
 };
