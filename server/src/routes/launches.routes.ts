@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { httpGetLaunches, httpPostLaunches } from './launches.controller.js';
+import { httpDeleteLaunches, httpGetLaunches, httpPostLaunches } from './launches.controller.js';
 
 
 const launchesRouter = Router();
@@ -8,6 +8,8 @@ const launchesRouter = Router();
 launchesRouter.get('/', httpGetLaunches);
 
 launchesRouter.post('/', httpPostLaunches);
+
+launchesRouter.delete('/:id', httpDeleteLaunches);
 
 
 export default launchesRouter;

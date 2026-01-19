@@ -33,6 +33,20 @@ let latestFlightNumber = 100;
 
 launches.set(launch.flightNumber, launch);
 
+export const isLaunchExist = (id: number) => {
+    return launches.has(id);
+}
+
+export const abortLaunch = (id: number) => {
+    const aborted = launches.get(id) as Launch;
+
+    aborted.upcoming = false;
+    aborted.success = false;
+
+    return aborted;
+}
+
+
 export const getLaunchesData = () => {
   return Array.from(launches.values());
 };
