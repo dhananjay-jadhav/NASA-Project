@@ -1,10 +1,11 @@
-describe("Get Launches", () => {
-    test('Get Launches Successfully with 200 status', () => {});
-});
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import request from 'supertest';
+import app from '../../app.ts';
 
-describe("Create Launches", () => {
-  test("Launch is created successfully with 200 status code", () => {});
-  test("Validate Missing required launch property", () => {});
-  test("Validate Invalid target", () => {});
-  test("Validate Invalid launchDate", () => {});
+test.describe('Launches API', () => {
+  test('GET /launches returns 200', async () => {
+    const res = await request(app).get('/launches');
+    assert.equal(res.status, 200);
+  });
 });
