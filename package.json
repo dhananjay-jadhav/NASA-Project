@@ -10,6 +10,7 @@
     "dev": "yarn workspace server & yarn workspace client",
     "start": "yarn workspace client build && yarn workspace server dev",
     "client": "yarn workspace client",
-    "server": "yarn workspace server"
+    "server": "yarn workspace server",
+    "server:test": "yarn server test"
   }
 }

@@ -4,8 +4,8 @@ import {
   getLaunchesData,
   isLaunchExist,
   setNewLauncheData,
-} from "../models/launches.model.js";
-import { getPlanetsData, validPlanet } from "../models/planets.model.js";
+} from "../../models/launches.model.js";
+import { getPlanetsData, validPlanet } from "../../models/planets.model.js";
 
 export function httpGetLaunches(req: Request, res: Response) {
   return res.status(200).json(getLaunchesData());

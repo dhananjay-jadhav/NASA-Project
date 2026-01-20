@@ -3,9 +3,9 @@ import cors from 'cors';
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
-import planetsRoute from './routes/planets.routes.js';
+import planetsRoute from './routes/planets/planets.routes.js';
 import morgan from 'morgan';
-import launchesRouter from './routes/launches.routes.js';
+import launchesRouter from './routes/launches/launches.routes.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

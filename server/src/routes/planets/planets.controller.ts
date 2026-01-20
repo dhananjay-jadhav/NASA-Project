@@ -1,5 +1,5 @@
 import {Request , Response} from 'express';
-import { getPlanetsData } from '../models/planets.model.js';
+import { getPlanetsData } from '../../models/planets.model.js';
 
 
 export const httpGetPlanets = (req: Request, res: Response) => {
